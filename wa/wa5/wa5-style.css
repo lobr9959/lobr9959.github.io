@@ -1,0 +1,63 @@
+body {
+    background-image: url("./ghibliTrain.jpg");
+    background-size: cover;
+}
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%; 
+  }
+
+#title{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+
+
+#logo {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 10px;
+    left: 10px;
+}
+
+#type {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: white;
+    margin-top: 700px;
+    margin-left: 1200px;
+}
+
+#name {
+    width: 150px;
+    color: red;
+    text-shadow: 1px 1px black;
+    position: absolute;
+    font-size: x-large;
+    left: 1200px;
+    top: 20px;
+}
+
+#chi {
+    width: 400px;
+    height: auto;
+    margin-top: 600px;
+    margin-right: 800px;
+    padding-right: 400px
+}
+
+#noFace {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: auto;
+    opacity: 10%;
+}
