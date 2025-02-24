@@ -1,13 +1,22 @@
-document.querySelectorAll('.kawaii').forEach(slider => {
-    slider.addEventListener('input', () => {
-        // Get the base color from the slider's style
-        let baseColor = getComputedStyle(slider).getPropertyValue('--base').trim();
-        let intensity = slider.value; // Slider value
+const redSlider = document.getElementById('red');
+const greenSlider = document.getElementById('green');
+const blueSlider = document.getElementById('blue');
 
-        // Modify the color based on the slider value (lighten/darken)
-        let newColor = `hsl(${intensity * 10}, 50%, 70%)`; // Example of using HSL
 
-        // Apply it as the background color
-        document.body.style.backgroundColor = newColor;
-    });
-});
+function backgroundColor()
+{
+    let red = redSlider.value;
+    let green = greenSlider.value;
+    let blue = blueSlider.value;
+
+
+    let rgbaValue = `rgb(${red}, ${green}, ${blue}, 0.25)`;
+
+    document.body.style.backgroundColor = rgbaValue;
+}
+
+redSlider.addEventListener('input', backgroundColor);
+greenSlider.addEventListener('input', backgroundColor);
+blueSlider.addEventListener('input', backgroundColor);
+
+backgroundColor();
