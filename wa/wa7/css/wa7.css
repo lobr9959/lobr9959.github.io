@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(15, 255, 67);
+}
+
+body:has(#image:hover){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(206, 149, 64);
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(43, 205, 226);
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    
+}
+
+nav a:hover{
+    background-color: indianred;
+    transition: background-color .25s;
+}
+
+
+img{
+    width:30vw;
+    height: 30vh;
+}
+
+#image {
+    width: 100vw;
+    height: ;
+}
+
+#image:hover {
+    animation-name: graphicDesign;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes graphicDesign{
+    from {
+        translate: 0 0;
+        width: 2vw;
+    }
+
+    to {
+        translate: 20vw 50vh;
+        width: 50vw;
+    }
+}
+
+#red-ball{
+    background-color: rgb(141, 30, 139);
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation-name: redball;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes redball{
+    from {
+        translate: 0 0;
+        width: 10vw;
+        height: 10vh;
+    }
+
+    25% {
+        translate: 20vw 150vh;
+        width: 30vw;
+        height: 20vh;
+    }
+
+    50% {
+        translate: 150vw 50vh;
+        width: 10vw;
+        height: 20vh;
+    }
+
+    75%{
+        translate: -5vw 10vh;
+        width: 30vw;
+        height: 20vh;
+    }
+
+    to {
+        translate: 0vw 0vh;
+        width: 150vw;
+        height: 150vh;
+    }
+}
+
+h1 {
+    color: white
+}
+#passion {
+    font-family: "Comic Sans MS", "Comic Sans";
+    color: white !important;
+}
