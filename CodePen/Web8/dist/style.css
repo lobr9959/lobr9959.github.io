@@ -1,0 +1,92 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0turn;
+  inherits: false;
+}
+
+.card {
+  animation: 2s gradient-angle infinite linear;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000000, #58646c),
+    conic-gradient(
+      from var(--gradient-angle),
+      #ded1b8 0%,
+      #4a3cc7 37%,
+      #90cdf9 30%,
+      #3cb9c7 33%,
+      #274758 40%,
+      #292758 50%,
+      #713cc7 77%,
+      #9095f9 80%,
+      #3c74c7 83%,
+      #d8e5e7 90%
+    );
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+@keyframes gradient-angle {
+  to {
+    --gradient-angle: 1turn;
+  }
+}
+
+/* その他 */
+html,
+body {
+  background: #67787c;
+}
+
+body {
+  font-family: "游ゴシック Medium", YuGothic, YuGothicM,
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  display: grid;
+  align-content: center;
+  min-height: 100svh;
+  padding: 24px;
+  color: #f6f6f6;
+  gap: 24px;
+
+  @media (width < 970px) {
+    align-content: start;
+  }
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  margin-inline: auto;
+  grid-auto-flow: column;
+  gap: 16px 40px;
+  @media (width < 970px) {
+    grid-auto-flow: row;
+  }
+}
+
+.card {
+  display: grid;
+  max-width: 240px;
+  padding: 20px;
+  text-decoration: none;
+  color: currentColor;
+  border-radius: 20px;
+  place-content: center;
+  place-items: center;
+  aspect-ratio: 1/1;
+  row-gap: 16px;
+}
+
+.card h2 {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+.card p {
+  font-size: 12px;
+}
+
+/* こんにちわんこそば！キラキラ✨ホームページエンジニアのとんこつおじさんだよ！ */
