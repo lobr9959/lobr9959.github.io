@@ -1,0 +1,66 @@
+body{
+    background-color: #f6cd88;
+}
+
+
+h1{
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #f2e9cc;
+    padding: .5em;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: .5em 1em;
+    font-size: medium;
+  }
+
+  nav li {
+    margin-left: 0;
+
+  }
+
+.Spreads {
+    width: 50%;
+    display: block;
+    
+}
+
+#rocket {
+    margin-left: -10px;
+    margin-right: auto;
+    border-top-right-radius: 25px; /* Top right corner */
+    border-bottom-right-radius: 25px; /* Bottom right corner */
+}
+
+#reverie {
+    margin-left: 50vw;
+    margin-right: auto;
+    border-top-left-radius: 25px; /* Top right corner */
+    border-bottom-left-radius: 25px; /* Bottom right corner */
+}
