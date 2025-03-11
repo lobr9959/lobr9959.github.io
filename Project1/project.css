@@ -1,35 +1,74 @@
 body {
-    background-color: #9fba96;
     color: black;
+    background-image: url(Gemini_Generated_Image_czam9aczam9aczam.jpeg);
+}
+
+p{
+    font-family: "tachyon", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "elevon", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+footer {
+    margin: auto;
+    background-color: #d5dfeb;
 }
 
 .concerts {
     display: flex;
     flex-direction: column;
-    background-color: #9fba96;
+    background-color: #d5dfeb;
     margin-left: 100px;
     margin-right: 100px;
+    border: solid black 1px;
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+
+.concerts p {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.concerts h1 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.concerts h4 {
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #title {
     margin-left: 100px;
+    font-family: "elevon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
 }
 
+
+
 nav {
-    background-color: #ffffff;
-    padding: .25em;
+    background-color: #d5dfeb;
+    padding: 0px !important;
     position: sticky;
     top: 0;
     overflow: hidden;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 100vw;
+    border: solid black 1px;
   }
   
   nav ul {
     margin: 0px;
-    padding: 0;
+    padding: 0px;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -40,4 +79,8 @@ nav {
     text-decoration: none;
     padding: .5em 1em;
     font-size: medium;
+  }
+
+  nav ul a:hover {
+    background-color: rgb(111, 111, 206);
   }
