@@ -1,0 +1,43 @@
+body {
+    background-color: #9fba96;
+    color: black;
+}
+
+.concerts {
+    display: flex;
+    flex-direction: column;
+    background-color: #9fba96;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#title {
+    margin-left: 100px;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: .25em;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  nav ul {
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav a {
+    color: black;
+    text-decoration: none;
+    padding: .5em 1em;
+    font-size: medium;
+  }
