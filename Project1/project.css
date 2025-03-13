@@ -1,6 +1,6 @@
 body {
     color: black;
-    background-image: url(Gemini_Generated_Image_czam9aczam9aczam.jpeg);
+    background-image: url(./img/Gemini_Generated_Image_czam9aczam9aczam.jpeg);
 }
 
 p{
@@ -15,10 +15,21 @@ h1 {
     font-style: normal;
 }
 
+em {
+    color: rgb(4, 124, 135);
+}
+
+section {
+}
+
 footer {
-    margin: auto;
     background-color: #d5dfeb;
 }
+
+footer h4 {
+    color: black;
+}
+
 
 .concerts {
     display: flex;
@@ -28,7 +39,11 @@ footer {
     margin-right: 100px;
     border: solid black 1px;
     border-radius: 15px;
-    padding-bottom: 10px;
+}
+
+.concerts img{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .concerts p {
@@ -67,8 +82,9 @@ nav {
   }
   
   nav ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
     list-style: none;
     display: flex;
     flex-direction: row;
