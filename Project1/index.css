@@ -183,13 +183,13 @@ nav {
     .concerts p {
         padding-left: 50px;
         padding-right: 50px;
-        font-size: smaller;
+        font-size: 10px;
     }
     
     .concerts h1 {
         padding-left: 50px;
         padding-right: 50px;
-        font-size: medium;
+        font-size: small;
     }
     
     .concerts h4 {
