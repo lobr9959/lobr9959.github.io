@@ -3,6 +3,8 @@ body {
     background-image: url(./img/Gemini_Generated_Image_czam9aczam9aczam.jpeg);
     padding: 0px;
     margin: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 p{
@@ -90,6 +92,7 @@ nav {
     overflow: hidden;
     width: 100vw;
     border: solid black 1px;
+    overflow-x: scroll;
   }
   
   nav ul {
@@ -121,6 +124,8 @@ nav {
         background-image: url(./img/Gemini_Generated_Image_czam9aczam9aczam.jpeg);
         padding: 0px;
         margin: 0px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     
     p{
