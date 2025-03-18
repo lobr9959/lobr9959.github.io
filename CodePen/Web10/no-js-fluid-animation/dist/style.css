@@ -63,3 +63,71 @@ div::after {
     --g: 100% ;
   }
 }
+
+@media screen and (max-width: 600px){
+  @property --r {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+  }
+  @property --g {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+  }
+  html, body, div {
+    display: grid;
+  }
+  
+  html {
+    min-height: 100%;
+  }
+  
+  body {
+    background: #000000;
+  }
+  
+  svg[aria-hidden=true][height="0"] {
+    position: fixed;
+  }
+  
+  img {
+    position: absolute;
+    z-index: 500 !important;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-top: 36vh;
+  
+  }
+  
+  div {
+    place-self: center;
+    border: solid 0em gold;
+    width: 50vw;
+    height: 15vh;
+    aspect-ratio: 1;
+    border-radius: 3em;
+  }
+  div::after {
+    --l: rgb(var(--r) var(--g) 0%),
+        rgb(calc(100% - var(--r)) calc(100% - var(--g)) 0%);
+    margin: -2em;
+    background: radial-gradient(var(--l)), linear-gradient(var(--l)), conic-gradient(at 0 100%, var(--l) 25%);
+    background-blend-mode: difference;
+    clip-path: inset(2em round 1em);
+    animation: r 4.7s ease-in-out -1.93s infinite alternate, g 4.3s ease-in-out -2.37s infinite alternate;
+    filter: url(#smoke) invert(1) saturate(2);
+    content: "";
+  }
+  
+  @keyframes r {
+    to {
+      --r: 100% ;
+    }
+  }
+  @keyframes g {
+    to {
+      --g: 100% ;
+    }
+  }
+}
