@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: #121212;
+  background: #000000;
 }
 
 svg[aria-hidden=true][height="0"] {
@@ -26,13 +26,18 @@ svg[aria-hidden=true][height="0"] {
 
 img {
   position: absolute;
-  
+  z-index: 500 !important;
+  width: 50vw;
+  margin-left: 24vw;
+  margin-top: 12vw;
+
 }
 
 div {
   place-self: center;
-  border: solid 1em gold;
+  border: solid 0em gold;
   width: 40vw;
+  height: 20vw;
   aspect-ratio: 1;
   border-radius: 3em;
 }
@@ -42,7 +47,7 @@ div::after {
   margin: -2em;
   background: radial-gradient(var(--l)), linear-gradient(var(--l)), conic-gradient(at 0 100%, var(--l) 25%);
   background-blend-mode: difference;
-  clip-path: inset(3em round 1em);
+  clip-path: inset(2em round 1em);
   animation: r 4.7s ease-in-out -1.93s infinite alternate, g 4.3s ease-in-out -2.37s infinite alternate;
   filter: url(#smoke) invert(1) saturate(2);
   content: "";
