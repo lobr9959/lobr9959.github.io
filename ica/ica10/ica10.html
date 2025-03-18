@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        width: 10vw;
+        background-color: rgb(200, 0, 100);
+        border: 1px solid black;
+        margin: auto;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+
+    <button id="button1">Click me at least twice</button>
+
+    <div id="box">
+        <p>Click on me...</p>
+    </div>
+    
+
+
+    <script>
+        let btn1 = document.getElementById('button1');
+
+        btn1.addEventListener('click', changeBackgroundColor);
+
+        box.addEventListener('click', link);
+
+        function link() {
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")
+        }
+
+        function takeInput(){
+            let input = prompt("What is today's date?");
+        }
+
+        function changeBackgroundColor() {
+            let background = document.querySelector('body');
+
+            if(background.style.backgroundColor == "black"){
+                background.style.backgroundColor = 'white'
+            }
+            else {
+                background.style.backgroundColor = 'black'
+            }
+            
+        }
+
+        function changeFont() {
+            let pTag = document.querySelector('p')
+            pTag.style.color = 'white'
+            pTag.style.fontFamily = 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </script>
+</body>
+</html>
