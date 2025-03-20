@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Silly story generator</title>
+
+    <style>
+      body {
+        background-color: gray;
+        padding-top: 10vh;
+        margin: auto;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 350px;
+      }
+
+      label {
+        font-weight: bold;
+        font-size: large;
+        color: white;
+      }
+
+      div {
+        padding-bottom: 20px;
+
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 150px;
+        background-color: #b7ffca;
+        color: black;
+      }
+
+      p {
+        text-align: left;
+        border-radius: 10px;
+        background: #b7ffca;
+        color: #000000;
+        padding: 10px;
+        visibility: hidden;
+      }
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="" />
+    </div>
+    <div>
+      <label for="us">US</label
+      ><input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label
+      ><input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    <div>
+      <button class="randomize">Generate random story</button>
+    </div>
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
+    <script src="wa10.js"></script>
+  </body>
+</html>
