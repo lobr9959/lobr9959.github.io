@@ -1,0 +1,54 @@
+h1 {
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 700;
+  font-style:oblique;
+  text-align: center;
+}
+
+body {
+  width: 640px;
+  margin: 0 auto;
+  background-color: #999;
+}
+
+.full-img {
+  position: relative;
+  display: block;
+  width: 640px;
+  height: 480px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+  background-color: rgba(0,0,0,0);
+}
+
+button {
+  border: 0;
+  background: rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 3px;
+  left: 2px;
+  border-radius: 1em;
+}
+
+.thumb-bar img {
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+}
+.displayed-img {
+  width: 640px;
+  height: 480px;
+  height: auto;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
