@@ -1,0 +1,32 @@
+@import url("https://use.typekit.net/ers2qgl.css");
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #ffee32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  all: unset;
+  background-color: #ffee32;
+  border: 6px solid #6fcaff;
+  border-radius: 10px; 
+  color: #6fcaff;
+  cursor: pointer;
+  font-family: "megavolt", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  transform: skewX(-15deg);
+}
+button:focus {
+  outline: revert;
+}
