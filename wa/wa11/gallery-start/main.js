@@ -4,13 +4,13 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
-const imageArray = ['pics1.jpg', `pics2.jpg`, `pics3.jpg`, `pics4.jpg`, `pics5.jpg`];
+const imageArray = ['pic1.jpg', `pic2.jpg`, `pic3.jpg`, `pic4.jpg`, `pic5.jpg`];
 const imageText = {
-  'pics1.jpg' : 'Urban Exporation - man climbing is somethin he shouldnt',
-  'pics2.jpg' : 'Quarry conveyor',
-  'pics3.jpg' : 'abandoned room filled with orange goo at the bottom',
-  'pics4.jpg' : 'New England rooftop',
-  'pics5.jpg' : 'Colorado Cliffside'
+  'pic1.jpg' : 'Urban Exporation - man climbing is somethin he shouldnt',
+  'pic2.jpg' : 'Quarry conveyor',
+  'pic3.jpg' : 'abandoned room filled with orange goo at the bottom',
+  'pic4.jpg' : 'New England rooftop',
+  'pic5.jpg' : 'Colorado Cliffside'
 }
 
 /* Looping through images */
