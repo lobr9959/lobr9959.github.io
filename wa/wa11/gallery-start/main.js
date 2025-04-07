@@ -4,13 +4,13 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
-const imageArray = ['pics1.jpg', `pics2.jpg`, `pics3.jpg`, `pics4.jpg`, `pics5.jpg`];
+const imageArray = ['pics1.JPG', `pics2.JPG`, `pics3.JPG`, `pics4.JPG`, `pics5.JPG`];
 const imageText = {
-  'pic1.jpg' : 'Closeup of a human eye',
-  'pic2.jpg' : 'Rock that looks like a wave',
-  'pic3.jpg' : 'Purple and white pansies',
-  'pic4.jpg' : 'Section of wall from a pharoah\'s tomb',
-  'pic5.jpg' : 'Large moth on a leaf'
+  'pics1.JPG' : 'Urban Exporation - man climbing is somethin he shouldnt',
+  'pics2.JPG' : 'Quarry conveyor',
+  'pics3.JPG' : 'abandoned room filled with orange goo at the bottom',
+  'pics4.JPG' : 'New England rooftop',
+  'pics5.JPG' : 'Colorado Cliffside'
 }
 
 /* Looping through images */
