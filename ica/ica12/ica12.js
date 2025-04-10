@@ -38,7 +38,7 @@ async function getQuote() {
   
 
 newQuoteButton.addEventListener("click", async Click => {
-    await getTrivia();
+    await getQuote();
 });
 
 showAnswerButton.addEventListener("click", Click => {
