@@ -10,25 +10,28 @@ const showAnswerButton = document.getElementById("js-tweet");
 let currentQuestion = "";
 let currentAnswer = "";
 
-
+function displayQuote() {
+    quoteTextElement.textContent = currentQuestion;
+    answerTextElement.textContent = ""; 
+}
 async function getQuote() {
     try {
       const response = await fetch(url);
   
-      if (!response.ok) {
-        throw new Error(`Network response was not ok: ${response.status}`);
-      }
+    if (!response.ok) {
+    throw new Error(`Network response was not ok: ${response.status}`);
+    }
   
-      const json = await response.json();
-  
-      console.log(json.question);
-      console.log(json.answer);
+    const json = await response.json();
 
-      currentQuestion = json.question;
-      currentAnswer = json.answer;
+    console.log(json.question);
+    console.log(json.answer);
+
+    currentQuestion = json.question;
+    currentAnswer = json.answer;
   
-      quoteTextElement.textContent = currentQuestion;
-      answerTextElement.textContent = ""; 
+    displayQuote();
+
     } catch (error) {
       console.error("Error fetching trivia:", error);
       alert("Failed to fetch trivia. Please try again.");
