@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rainy Bee Tree World</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script>
+      AFRAME.registerComponent('rain', {
+        init: function () {
+          const scene = this.el;
+          for (let i = 0; i < 200; i++) {
+            const drop = document.createElement('a-sphere');
+            drop.setAttribute('radius', '0.02');
+            drop.setAttribute('color', '#000000');
+            drop.setAttribute('position', {
+              x: (Math.random() - 0.5) * 20,
+              y: Math.random() * 10 + 5,
+              z: (Math.random() - 0.5) * 20
+            });
+            drop.setAttribute('fall', '');
+            scene.appendChild(drop);
+          }
+        }
+      });
+
+      AFRAME.registerComponent('fall', {
+        tick: function (time, deltaTime) {
+          const pos = this.el.object3D.position;
+          pos.y -= deltaTime * 0.0025;
+          if (pos.y < 0) {
+            pos.y = Math.random() * 10 + 5;
+          }
+        }
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <a-scene rain>
+
+        <a-assets>
+            
+            <a-asset-item id="patty" src="models/patty.glb"></a-asset-item>
+            <a-asset-item id="head-obj" src="models/head.obj"></a-asset-item>
+            <a-asset-item id="head-mtl" src="models/head.mtl"></a-asset-item>
+
+            <a-asset-item id="plankton" src="models/plankton.glb"></a-asset-item>
+          </a-assets>
+          <a-entity gltf-model="#patty" position="0 0 -10" scale=".1 .1 .1"></a-entity> 
+          <a-light type="directional" color="#ffffff" intensity="0.8" position="1 3 2"></a-light>
+          <a-entity gltf-model="#plankton" position="-400 -100 -00" scale="100 100 100" rotation="0 90 0"></a-entity>
+          <a-entity obj-model="obj: #head-obj; mtl: #head-mtl" scale=".1 .1 .1" position="-50 -20 -50" rotation="-90 0 0"></a-entity>
+        <a-sky src="./krustyKrab.png"></a-sky>
+        <a-entity id="creepySound" sound="src: url(Plankton1.mp3); autoplay: false; loop: true; positional: true" position="-400 -100 -00"></a-entity>
+      
+        
+
+        <!-- Camera -->
+        <a-entity position="0 2 5">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+
+  </body>
+</html>
