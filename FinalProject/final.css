@@ -1,60 +1,190 @@
-body {
-    font-size: large;
-    background-color: rgb(255, 255, 255);
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    margin: 20px auto;
-    padding: 40px;
-    width: 50vw;
-    background-color: rgb(71, 71, 71);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container, .modal-content {
+    background: #fff;
     border-radius: 10px;
-}
-
-#inputsContainer {
-    background-color: transparent;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1, .modal h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .display {
+    background: #eee;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+  
+  #phoneDisplay {
+    font-family: monospace;
+    font-weight: bold;
+  }
+  
+  .game-section, .status-section {
+    margin: 30px 0;
+  }
+  
+  .instructions, .digit-selector {
+    margin-bottom: 20px;
+  }
+  
+  #digitSelect {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 80px;
+  }
+  
+  .game-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .game-bar {
     width: 100%;
-}
-
-label {
-    color: gray;
-    display: block;
-    margin-top: 10px;
-}
-
-input {
-    margin-bottom: 10px;
-    width: 80%;
-    padding: 5px;
-    font-size: 1rem;
-}
-
-h1 {
-    color: rgb(0, 0, 0);
+    height: 60px;
+    background: #333;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .number-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  .number-bar span {
+    flex: 1;
     text-align: center;
-}
-
-p {
-    color: white;
-    margin-top: 20px;
-    text-align: center;
-}
-
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: gray;
-    color: white;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #indicator {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 0, 0, 0.7);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: left 0.1s linear;
+  }
+  
+  button, #digitSelect {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  #verifyButton, #closeModal, #restartButton {
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+  }
+  
+  #verifyButton:hover {
+    background: #45a049;
+    transform: scale(1.05);
+  }
+  
+  #verifyButton:active {
+    transform: scale(0.95);
+  }
+  
+  #submitButton {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    color: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  #submitButton:hover {
+    background: linear-gradient(135deg, #45a049, #1e88e5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  #submitButton:active {
+    transform: translateY(1px);
+  }
+  
+  #attempts, #totalFails {
+    font-weight: bold;
+    color: #ff5252;
+  }
+  
+  #message {
+    margin: 10px 0;
+    min-height: 24px;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #finalNumber {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    color: #2196F3;
+  }
+  
+  .fail-emoji {
+    font-size: 80px;
+    margin: 20px 0;
+  }
+  

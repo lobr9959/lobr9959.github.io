@@ -2,17 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Terrible Phone Input</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frustrating Phone Entry</title>
     <link rel="stylesheet" href="final.css">
 </head>
 <body>
-    <h1>Give me your phone number</h1>
     <div class="container">
-        <form id="phoneForm">
-            <div id="inputsContainer"></div>
-            <button type="submit">Submit</button>
-        </form>
-        <p id="result"></p>
+        <h1>Enter Your Phone Number</h1>
+        <p>Current Position: <span id="currentPosition">1</span> of 10</p>
+        <div class="display">
+            <div id="phoneDisplay">__________</div>
+        </div>
+        
+        <div class="game-section">
+            <div class="instructions">
+                <p>1. Select a digit (0-9)</p>
+                <div class="digit-selector">
+                    <select id="digitSelect">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                
+                <p>2. Verify your selection by clicking when the indicator is on the same number</p>
+            </div>
+            
+            <div class="game-bar-container">
+                <div class="game-bar">
+                    <div class="number-bar">
+                        <span>0</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                    </div>
+                    <div id="indicator"></div>
+                </div>
+                <button id="verifyButton">CLICK TO VERIFY</button>
+            </div>
+        </div>
+        
+        <div class="status-section">
+            <p>Attempts remaining: <span id="attempts">3</span></p>
+            <p id="message"></p>
+            <button id="submitButton" class="hidden">SUBMIT YOUR NUMBER</button>
+        </div>
+        
+        <div id="resultModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Your Phone Number</h2>
+                <p id="finalNumber"></p>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+        
+        <div id="videoModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Too Many Failed Attempts!</h2>
+                <p>You've used all your attempts for this digit.</p>
+                <p>Total fails: <span id="totalFails">0</span></p>
+                <div class="fail-emoji">😭</div>
+                <button id="restartButton">Try Again</button>
+            </div>
+        </div>
     </div>
 
     <script src="final.js"></script>
