@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let totalFailedAttempts = 0;
     let indicatorPosition = 0;
     let animationId;
-    const indicatorSpeed = 150;
+    const indicatorSpeed = 100;
     let isGameOver = false;
     let direction = 1;
     let lastTime = null;
