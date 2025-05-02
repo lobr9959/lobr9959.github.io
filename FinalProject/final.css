@@ -6,7 +6,7 @@
   }
   
   body {
-    background: #f5f5f5;
+    background: #6f6b63;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
   }
   
   .container, .modal-content {
-    background: #fff;
+    background: #ffffff;
     border-radius: 10px;
     padding: 30px;
     width: 90%;

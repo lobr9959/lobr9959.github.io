@@ -14,11 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const videoModal = document.getElementById('videoModal');
     const restartButton = document.getElementById('restartButton');
     const totalFailsElement = document.getElementById('totalFails');
+    const buzzer = document.getElementById('wrongBuzzer');
+    const sadViolin = document.getElementById('sadViolin');
+    const win = document.getElementById('win');
+    const wow = document.getElementById('wow');
+    const ding = document.getElementById('ding');
 
     // Game variables
     let phoneNumber = ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'];
     let currentPosition = 0;
-    let attempts = 5;
+    let attempts = 3;
     let totalFailedAttempts = 0;
     let indicatorPosition = 0;
     let animationId;
@@ -70,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const gameBarWidth = document.querySelector('.game-bar').offsetWidth;
             const step = gameBarWidth / 10;
 
-            indicatorPosition += 0.3 * direction;
+            indicatorPosition += 0.5 * direction;
 
             if (indicatorPosition >= 10) {
                 indicatorPosition = 9.99;
@@ -100,6 +105,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const indicatorDigit = Math.floor(indicatorPosition);
 
         if (selectedDigit === indicatorDigit) {
+            wow.currentTime = 0;
+            ding.currentTime = 0;
+            wow.play();
+            ding.play();
             phoneNumber[currentPosition] = selectedDigit;
             messageElement.textContent = 'Correct! ✓';
             messageElement.style.color = '#4CAF50';
@@ -110,12 +119,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 submitButton.classList.remove('hidden');
                 messageElement.textContent = 'Phone number complete! You can submit now.';
             } else {
-                attempts = 3;
                 attemptsElement.textContent = attempts;
                 startIndicator();
                 digitSelect.selectedIndex = Math.floor(Math.random() * 10);
             }
         } else {
+            buzzer.currentTime = 0;
+            buzzer.play();
+
             attempts--;
             totalFailedAttempts++;
             attemptsElement.textContent = attempts;
@@ -123,6 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
             messageElement.style.color = '#ff5252';
 
             if (attempts <= 0) {
+                sadViolin.currentTime = 0;
+                sadViolin.play();
                 isGameOver = true;
                 totalFailsElement.textContent = totalFailedAttempts;
                 videoModal.classList.remove('hidden');
@@ -133,17 +146,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     submitButton.addEventListener('click', function () {
+        win.play();
         finalNumber.textContent = phoneNumber.join('');
         resultModal.classList.remove('hidden');
     });
 
     closeModal.addEventListener('click', function () {
         resultModal.classList.add('hidden');
+        win.pause();
         initGame();
     });
 
     restartButton.addEventListener('click', function () {
         videoModal.classList.add('hidden');
+        sadViolin.pause();
         initGame();
     });
 
