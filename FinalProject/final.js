@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sadViolin = document.getElementById('sadViolin');
     const win = document.getElementById('win');
     const wow = document.getElementById('wow');
-    const ding = document.getElementById('ding');
+
 
     // Game variables
     let phoneNumber = ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'];
@@ -106,9 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (selectedDigit === indicatorDigit) {
             wow.currentTime = 0;
-            ding.currentTime = 0;
             wow.play();
-            ding.play();
             phoneNumber[currentPosition] = selectedDigit;
             messageElement.textContent = 'Correct! ✓';
             messageElement.style.color = '#4CAF50';
